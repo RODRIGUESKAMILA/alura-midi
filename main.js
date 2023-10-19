@@ -20,3 +20,20 @@ function tocaSom (seletorAudio) {
     const instrumento = tecla.classlist[1];
     const idAudio = '#som_${instrumento}'; //template string
   }
+    tecla.onclick = function (evento) {
+        tocaSom(idAudio);
+    }
+
+    tecla.onkeydown = fuction (evento) {
+
+      if (evento.code === 'Space' || evento.code ==='Enter') {
+          tecla.classList.add('ativa');
+      }
+
+    }
+
+    tecla.onkeyup = function () {
+      tecla.classList.remove('ativa');
+    }
+
+  }
